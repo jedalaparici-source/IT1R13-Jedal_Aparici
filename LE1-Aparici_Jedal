@@ -1,15 +1,17 @@
 #include <stdio.h>
-
 int main() {
-    printf("================================\n");
-    printf("STUDENT PROFILE\n");
-    printf("================================\n");
-    printf("Name: Jedal Aparici\n");
-    printf("Course and Section: BSIT-1R13\n");
-    printf("Year Level: 1st Year\n");
-    printf("================================\n");
-    printf("FUTURE PROGRAMMER\n");
-    printf("================================\n");
+ printf("============================\n");
+ printf (".            STUDENT PROFILE\n");
+ printf("============================\n");
 
-    return 0;
+
+          printf("Name: Jedal D. Aparici\n");
+          printf("Course and Section: BSIT-1R13\n");
+          printf("Year Level:    1st Year\n");
+
+printf("=====================•===========\n");
+         printf("        SOFTWARE DEVELOPER\n");
+printf("==================================");
+         return  0;
+         
 }
