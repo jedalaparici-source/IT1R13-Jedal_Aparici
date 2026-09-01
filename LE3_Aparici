@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char name[100];
+    char section[50];
+    double num1, num2;
+
+    // Get student info
+    printf("Enter Complete Name: ");
+    fgets(name, sizeof(name), stdin);
+
+    printf("Enter Section: ");
+    fgets(section, sizeof(section), stdin);
+
+    // Remove trailing newline from fgets input
+    name[strcspn(name, "\n")] = '\0';
+    section[strcspn(section, "\n")] = '\0';
+
+    printf("\n");
+
+    // Get numbers
+    printf("Enter first number: ");
+    scanf("%lf", &num1);
+
+    printf("Enter second number: ");
+    scanf("%lf", &num2);
+
+    printf("\n");
+
+    // Display results
+    printf(" Student Calculator\n");
+    printf("Student name: %s\n", name);
+    printf("Section: %s\n", section);
+    printf(" Results:\n");
+    printf("%.0f + %.0f = %.0f\n", num1, num2, num1 + num2);
+    printf("%.0f - %.0f = %.0f\n", num1, num2, num1 - num2);
+    printf("%.0f * %.0f = %.0f\n", num1, num2, num1 * num2);
+    printf("%.0f / %.0f = %.2f\n", num1, num2, num1 / num2);
+
+    return 0;
+}
