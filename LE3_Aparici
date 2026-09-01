@@ -6,37 +6,34 @@ int main() {
     char section[50];
     double num1, num2;
 
-    // Get student info
     printf("Enter Complete Name: ");
     fgets(name, sizeof(name), stdin);
+    name[strcspn(name, "\n")] = '\0';
 
     printf("Enter Section: ");
     fgets(section, sizeof(section), stdin);
-
-    // Remove trailing newline from fgets input
-    name[strcspn(name, "\n")] = '\0';
     section[strcspn(section, "\n")] = '\0';
 
-    printf("\n");
-
-    // Get numbers
     printf("Enter first number: ");
     scanf("%lf", &num1);
 
     printf("Enter second number: ");
     scanf("%lf", &num2);
 
-    printf("\n");
+    printf("\n--- Student Calculator ---\n");
+    printf("Student: %s\n", name);
+    printf("Section: %s\n\n", section);
 
-    // Display results
-    printf(" Student Calculator\n");
-    printf("Student name: %s\n", name);
-    printf("Section: %s\n", section);
-    printf(" Results:\n");
-    printf("%.0f + %.0f = %.0f\n", num1, num2, num1 + num2);
-    printf("%.0f - %.0f = %.0f\n", num1, num2, num1 - num2);
-    printf("%.0f * %.0f = %.0f\n", num1, num2, num1 * num2);
-    printf("%.0f / %.0f = %.2f\n", num1, num2, num1 / num2);
+    printf("Results:\n");
+    printf("%.2f + %.2f = %.2f\n", num1, num2, num1 + num2);
+    printf("%.2f - %.2f = %.2f\n", num1, num2, num1 - num2);
+    printf("%.2f * %.2f = %.2f\n", num1, num2, num1 * num2);
+
+    if (num2 != 0) {
+        printf("%.2f / %.2f = %.2f\n", num1, num2, num1 / num2);
+    } else {
+        printf("Division by zero is not allowed.\n");
+    }
 
     return 0;
 }
